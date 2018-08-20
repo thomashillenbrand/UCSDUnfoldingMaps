@@ -4,7 +4,6 @@ package module3;
 
 import de.fhpotsdam.unfolding.UnfoldingMap;
 import de.fhpotsdam.unfolding.data.PointFeature;
-import de.fhpotsdam.unfolding.geo.Location;
 import de.fhpotsdam.unfolding.marker.Marker;
 import de.fhpotsdam.unfolding.marker.SimplePointMarker;
 import de.fhpotsdam.unfolding.providers.MBTilesMapProvider;
@@ -25,7 +24,6 @@ import java.util.List;
 /**
  * EarthquakeCityMap
  * An application with an interactive map displaying earthquake data.
- * 
  */
 public class EarthquakeCityMap extends PApplet {
 
@@ -71,7 +69,7 @@ public class EarthquakeCityMap extends PApplet {
         //Use parser to collect properties for each earthquake
         List<PointFeature> earthquakes = ParseFeed.parseEarthquake(this, earthquakesURL);
 
-        for(PointFeature feature : earthquakes){
+        for (PointFeature feature : earthquakes) {
             markers.add(createMarker(feature));
         }
 
@@ -96,15 +94,13 @@ public class EarthquakeCityMap extends PApplet {
         // set marker size and color based on earthquake magnitude
         Object magObj = feature.getProperty("magnitude");
         float mag = Float.parseFloat(magObj.toString());
-        if(mag < THRESHOLD_LIGHT){
+        if (mag < THRESHOLD_LIGHT) {
             marker.setColor(blue);
             marker.setRadius(5.0f);
-        }
-        else if(mag >= THRESHOLD_LIGHT && mag <= THRESHOLD_MODERATE){
+        } else if (mag >= THRESHOLD_LIGHT && mag <= THRESHOLD_MODERATE) {
             marker.setColor(yellow);
             marker.setRadius(10.0f);
-        }
-        else {
+        } else {
             marker.setColor(red);
             marker.setRadius(15.0f);
 
