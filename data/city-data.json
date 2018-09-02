@@ -1,7 +1,8 @@
 {"type":"FeatureCollection","features":[
 {"type":"Feature","properties":{"name":"Berlin", "population":"3.375", "country" : "Germany", "coastal" : "false"},"geometry":{"type":"Point","coordinates":[13.383, 52.5167]}},
+{"type":"Feature","properties":{"name":"Washington D.C.", "population":"0.693", "country" : "United States", "coastal" : "true"},"geometry":{"type":"Point","coordinates":[-77.0369, 38.9072]}},
 {"type":"Feature","properties":{"name":"Tokyo", "population":"13.35", "country" : "Japan", "coastal" : "true"},"geometry":{"type":"Point","coordinates":[139.6833, 35.6833]}},
-{"type":"Feature","properties":{"name":"New Delhi", "population":"9.88", "country" : "India", "coastal" : "false"},"geometry":{"type":"Point","coordinates":[ 77.2090, 28.6139]}},
+{"type":"Feature","properties":{"name":"New Delhi", "population":"9.88", "country" : "India", "coastal" : "false"},"geometry":{"type":"Point","coordinates":[77.2090, 28.6139]}},
 {"type":"Feature","properties":{"name":"Los Angeles", "population":"3.92", "country" : "United States", "coastal" : "true"},"geometry":{"type":"Point","coordinates":[-118.2500, 34.0500]}},
 {"type":"Feature","properties":{"name":"Boston", "population":" 4.18", "country" : "United States", "coastal" : "true"},"geometry":{"type":"Point","coordinates":[-71.0589, 42.3601]}},
 {"type":"Feature","properties":{"name":"Copenhagen", "population":"1.26", "country" : "Denmark", "coastal" : "true"},"geometry":{"type":"Point","coordinates":[12.5683, 55.6761]}},
