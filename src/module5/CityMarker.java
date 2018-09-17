@@ -1,5 +1,6 @@
 package module5;
 
+import de.fhpotsdam.unfolding.UnfoldingMap;
 import de.fhpotsdam.unfolding.data.Feature;
 import de.fhpotsdam.unfolding.data.PointFeature;
 import de.fhpotsdam.unfolding.geo.Location;
@@ -16,7 +17,7 @@ import processing.core.PGraphics;
 // TODO: Change SimplePointMarker to CommonMarker as the very first thing you do 
 // in module 5 (i.e. CityMarker extends CommonMarker).  It will cause an error.
 // That's what's expected.
-public class CityMarker extends SimplePointMarker {
+public class CityMarker extends CommonMarker {
 	
 	public static int TRI_SIZE = 5;  // The size of the triangle marker
 	
@@ -35,7 +36,7 @@ public class CityMarker extends SimplePointMarker {
 	/**
 	 * Implementation of method to draw marker on the map.
 	 */
-	public void draw(PGraphics pg, float x, float y) {
+	public void drawMarker(PGraphics pg, float x, float y) {
 		// Save previous drawing style
 		pg.pushStyle();
 		
@@ -46,15 +47,17 @@ public class CityMarker extends SimplePointMarker {
 		// Restore previous drawing style
 		pg.popStyle();
 	}
-	
+
 	/** Show the title of the city if this marker is selected */
 	public void showTitle(PGraphics pg, float x, float y)
 	{
-		
-		// TODO: Implement this method
+		String name = this.getCity();
+		String country = this.getCountry();
+		float pop = this.getPopulation();
+		pg.fill(0);
+		pg.textSize(8.5f);
+		pg.text(String.format("City: %s | Country: %s | Pop: %.3f mil", name, country, pop), x, y);
 	}
-	
-	
 	
 	/* Local getters for some city properties.  
 	 */

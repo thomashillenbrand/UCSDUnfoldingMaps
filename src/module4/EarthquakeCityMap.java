@@ -50,8 +50,8 @@ public class EarthquakeCityMap extends PApplet {
     private String earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
 
     // The files containing city names and info and country names and info
-    private String cityFile = "/home/thomashillenbrand/IdeaProjects/UCSDUnfoldingMaps/data/city-data.json";
-    private String countryFile = "/home/thomashillenbrand/IdeaProjects/UCSDUnfoldingMaps/data/countries.geo.json";
+    private String cityFile = "/Users/thomashillenbrand/IdeaProjects/UCSDUnfoldingMaps/data/city-data.json";
+    private String countryFile = "/Users/thomashillenbrand/IdeaProjects/UCSDUnfoldingMaps/data/countries.geo.json";
 
     // The map
     private UnfoldingMap map;
@@ -83,7 +83,7 @@ public class EarthquakeCityMap extends PApplet {
         //earthquakesURL = "/home/thomashillenbrand/IdeaProjects/UCSDUnfoldingMaps/data/test2.atom";
 
         // WHEN TAKING THIS QUIZ: Uncomment the next line
-        earthquakesURL = "/home/thomashillenbrand/IdeaProjects/UCSDUnfoldingMaps/data/quiz1.atom";
+        //earthquakesURL = "/home/thomashillenbrand/IdeaProjects/UCSDUnfoldingMaps/data/quiz1.atom";
 
 
         // (2) Reading in earthquake data and geometric properties
@@ -115,13 +115,6 @@ public class EarthquakeCityMap extends PApplet {
 
         // could be used for debugging
         printQuakes();
-        System.out.println("======================================");
-        int red = color(255, 0, 0);
-        System.out.println("RED: "+red);
-        int blue = color(0, 0, 255);
-        System.out.println("BLUE: "+blue);
-        int yellow = color(255, 255, 0);
-        System.out.println("YELLOW: "+yellow);
 
         // (3) Add markers to map
         //     NOTE: Country markers are not added to the map.  They are used
