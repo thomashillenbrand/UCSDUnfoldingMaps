@@ -76,11 +76,11 @@ public class AirportMap extends PApplet {
                 route.addLocation(airports.get(dest));
             }
 
-            RouteMarker routeMarker = new RouteMarker(route.getLocations(), route.getProperties());
+            SimpleLinesMarker sl = new SimpleLinesMarker(route.getLocations(), route.getProperties());
 
             // set routes hidden by deafult to avoid clutter
-            routeMarker.setHidden(true);
-            routeList.add(routeMarker);
+            sl.setHidden(true);
+            routeList.add(sl);
         }
 
         // add routes and airports
@@ -172,35 +172,41 @@ public class AirportMap extends PApplet {
 
         // list clicked airports:
         if (!lastClicked.isEmpty()) {
-            textSize(10);
-            AirportMarker currentMarker;
-            String name;
-            int count = 0;
-            int nameYBase = ybase + 50;
-
-            // List selected airports
-            for (CommonMarker marker : lastClicked) {
-                currentMarker = (AirportMarker) marker;
-                int routeCount = 0;
-
-                // draw route lines for selected airports
-                for(Marker m : routeList){
-                    RouteMarker rm = (RouteMarker) m;
-                    List<Location> locs = rm.getLocations();
-                    if(locs.contains(marker.getLocation())) {
-                        routeCount++;
-                        m.setHidden(false);
-                    }
-                }
-                // write airprt name followed by number of routes connecting thru it
-                name = String.format("* %s (%s) - %d", currentMarker.getName(), currentMarker.getCode(), routeCount);
-                text(name, xbase + 10, (nameYBase) + 15 * count++);
-
-
-            }
+            listClickedAirPorts(xbase, ybase);
 
         } else return;
 
+
+    }
+
+    public void listClickedAirPorts(int xbase, int ybase){
+
+        textSize(10);
+        AirportMarker currentMarker;
+        String name;
+        int count = 0;
+        int nameYBase = ybase + 50;
+
+        // List selected airports
+        for (CommonMarker marker : lastClicked) {
+            currentMarker = (AirportMarker) marker;
+            int routeCount = 0;
+
+            // draw route lines for selected airports
+            for (Marker m : routeList) {
+                SimpleLinesMarker sl = (SimpleLinesMarker) m;
+                List<Location> locs = sl.getLocations();
+                if (locs.contains(marker.getLocation())) {
+                    routeCount++;
+                    m.setHidden(false);
+                }
+            }
+
+            // write airport name followed by number of routes connecting thru it
+            name = String.format("* %s (%s) - %d", currentMarker.getName(), currentMarker.getCode(), routeCount);
+            text(name, xbase + 10, (nameYBase) + 15 * count++);
+
+        }
 
     }
 
@@ -222,6 +228,7 @@ public class AirportMap extends PApplet {
 
     /**
      * Method for action when the mouse is hovered over a selectable marker.
+     *
      * @param markers
      */
     private void selectMarkerIfHover(List<Marker> markers) {

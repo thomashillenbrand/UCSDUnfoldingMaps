@@ -62,10 +62,6 @@ public class AirportMarker extends CommonMarker {
 		pg.popStyle();
 	}
 
-//	public void showRoutes(PGraphics pg, float x, float y){
-//
-//	}
-
 	/**
 	 * Helper method to get the name of an AirportMarker
 	 *
