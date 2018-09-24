@@ -874,7 +874,6 @@
 889,"Berberati","Berberati","Central African Republic","BBT","FEFT",4.221583,15.786369,1929,1,"N","Africa/Bangui"
 890,"Bata","Bata","Equatorial Guinea","BSG","FGBT",1.905469,9.805681,13,1,"N","Africa/Malabo"
 891,"Malabo","Malabo","Equatorial Guinea","SSG","FGSL",3.755267,8.708717,76,1,"N","Africa/Malabo"
-892,"Ascension Aux Af","Wide Awake","Saint Helena","","FHAW",-7.969597,-14.393664,278,0,"N","Atlantic/St_Helena"
 893,"Sir Seewoosagur Ramgoolam Intl","Plaisance","Mauritius","MRU","FIMP",-20.430235,57.6836,186,4,"N","Indian/Mauritius"
 894,"Plaine Corail","Rodriguez Island","Mauritius","RRG","FIMR",-19.757658,63.360983,95,4,"N","Indian/Mauritius"
 895,"Diego Garcia Nsf","Diego Garcia Island","British Indian Ocean Territory","","FJDG",-7.313267,72.411089,9,6,"U","Indian/Chagos"
@@ -5305,7 +5304,6 @@
 6433,"Dandong","Dandong","China","DDG","ZYDD",40.0255,124.2866,0,8,"N","Asia/Chongqing"
 6434,"Ordos Ejin Horo","Dongsheng","China","DSN","ZBDS",39.85,110.033,0,8,"N","Asia/Chongqing"
 6435,"Panzhihua","Panzhihua","China","PZI","ZUZH",26.54,101.799,9186,8,"N","Asia/Chongqing"
-6436,"Grytviken","Grytviken","South Georgia and the Islands","",\N,-54.16534,-36.30288,0,-2,"N","Atlantic/South_Georgia"
 6437,"South Shetland","South Shetland","Antarctica","",\N,-68,-58,0,-4,"N",\N
 6438,"South Shetland","South Shetland","Antarctica","",\N,-63.37,-62.83,0,12,"N","Antarctica/South_Pole"
 6439,"New Rochelle Amtrak Station","New Rochelle","United States","",\N,40.913923,-73.782008,66,-5,"A","America/New_York"
@@ -6463,7 +6461,6 @@
 7888,"Buchanan Field Airport","Concord","United States","CCR","KCCR",37.9896667,-122.0568889,26,-8,"A","America/Los_Angeles"
 7889,"Key Largo","Ocean Reef Club Airport","United States","OCA","07FA",25.325393,-80.274775,8,-5,"A","America/New_York"
 7890,"Denver Union Station","Denver","United States","",\N,39.753187,-105.000093,0,-7,"A","America/Denver"
-7891,"DELETE","DELETE","United States","",\N,-1.1111,-1.1111,0,0,"A",\N
 7892,"Polygone","Strasbourg Neudorf","France","","LFGC",48.5548,7.7778,130,1,"E","Europe/Paris"
 7893,"Nannhausen","Nannhausen","Germany","","EDRN",50,7.591667,1296,1,"E","Europe/Berlin"
 7894,"Yushu Batang","Yushu","China","YUS","ZLYS",32.825,97.125,13000,8,"U","Asia/Chongqing"
@@ -6755,7 +6752,6 @@
 8183,"Aeroclub Deva","Deva","Romania","DVA",\N,45.5153,22.5813,615,2,"U","Europe/Bucharest"
 8184,"Aeroclub Cluj","Dezmir","Romania","DZM",\N,46.4643,23.4258,1019,2,"U","Europe/Bucharest"
 8185,"Antarctica","Antarctica","Antarctica","",\N,-66,90,8000,12,"U","Antarctica/South_Pole"
-8186,"Antarctica","Antarctica","Antarctica","",\N,-66,90,8000,12,"N","Antarctica/South_Pole"
 8187,"Morrisville Stowe State Airport","Morrisville","United States","MVL","KMVL",44.535,-72.614,732,-5,"A","America/New_York"
 8188,"Dallas Executive Airport","Dallas","United States","RBD","KRBD",32.680833,-96.868333,201,-6,"A","America/Chicago"
 8189,"Como Water AD","Como","Italy","","LILY",45.4853,9.0411,663,1,"E","Europe/Rome"
