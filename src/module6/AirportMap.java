@@ -181,15 +181,21 @@ public class AirportMap extends PApplet {
             // List selected airports
             for (CommonMarker marker : lastClicked) {
                 currentMarker = (AirportMarker) marker;
-                name = String.format("* %s (%s)", currentMarker.getName(), currentMarker.getCode());
-                text(name, xbase + 10, (nameYBase) + 15 * count++);
+                int routeCount = 0;
 
                 // draw route lines for selected airports
                 for(Marker m : routeList){
                     RouteMarker rm = (RouteMarker) m;
                     List<Location> locs = rm.getLocations();
-                    if(locs.contains(marker.getLocation())) m.setHidden(false);
+                    if(locs.contains(marker.getLocation())) {
+                        routeCount++;
+                        m.setHidden(false);
+                    }
                 }
+                // write airprt name followed by number of routes connecting thru it
+                name = String.format("* %s (%s) - %d", currentMarker.getName(), currentMarker.getCode(), routeCount);
+                text(name, xbase + 10, (nameYBase) + 15 * count++);
+
 
             }
 
