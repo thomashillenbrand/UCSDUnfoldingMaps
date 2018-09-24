@@ -76,11 +76,11 @@ public class AirportMap extends PApplet {
                 route.addLocation(airports.get(dest));
             }
 
-            SimpleLinesMarker sl = new SimpleLinesMarker(route.getLocations(), route.getProperties());
+            RouteMarker routeMarker = new RouteMarker(route.getLocations(), route.getProperties());
 
             // set routes hidden by deafult to avoid clutter
-            sl.setHidden(true);
-            routeList.add(sl);
+            routeMarker.setHidden(true);
+            routeList.add(routeMarker);
         }
 
         // add routes and airports
@@ -178,10 +178,18 @@ public class AirportMap extends PApplet {
             int count = 0;
             int nameYBase = ybase + 50;
 
+            // List selected airports
             for (CommonMarker marker : lastClicked) {
                 currentMarker = (AirportMarker) marker;
                 name = String.format("* %s (%s)", currentMarker.getName(), currentMarker.getCode());
                 text(name, xbase + 10, (nameYBase) + 15 * count++);
+
+                // draw route lines for selected airports
+                for(Marker m : routeList){
+                    RouteMarker rm = (RouteMarker) m;
+                    List<Location> locs = rm.getLocations();
+                    if(locs.contains(marker.getLocation())) m.setHidden(false);
+                }
 
             }
 
@@ -256,6 +264,7 @@ public class AirportMap extends PApplet {
                 lastClicked.forEach(marker -> marker.setClicked(false));
                 lastClicked.clear();
                 revealAllAirports();
+                hideAllRoutes();
                 break;
 
             // hides unselected airports
@@ -277,6 +286,13 @@ public class AirportMap extends PApplet {
      */
     private void revealAllAirports() {
         airportList.forEach(a -> a.setHidden(false));
+    }
+
+    /**
+     * Helper method to hide all airport routes on the map
+     */
+    private void hideAllRoutes() {
+        routeList.forEach(a -> a.setHidden(true));
     }
 
 

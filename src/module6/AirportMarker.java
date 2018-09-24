@@ -29,10 +29,6 @@ public class AirportMarker extends CommonMarker {
 			drawMarker(pg, x, y);
 			if (selected) {
 				showTitle(pg, x, y);
-				showRoutes(pg, x, y);
-			}
-			if (selected || clicked){
-				showRoutes(pg, x, y);
 			}
 		}
 	}
@@ -66,9 +62,9 @@ public class AirportMarker extends CommonMarker {
 		pg.popStyle();
 	}
 
-	public void showRoutes(PGraphics pg, float x, float y){
-
-	}
+//	public void showRoutes(PGraphics pg, float x, float y){
+//
+//	}
 
 	/**
 	 * Helper method to get the name of an AirportMarker
